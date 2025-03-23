@@ -41,6 +41,13 @@ public:
 
 //{ Driver Code Starts.
 
+// 5
+// 12 4 3 0 1
+// -2 4 23
+// 39 31 32 32
+// 49 1
+// 23 1314 1 -234 1 -1
+
 int main() {
   int t;
   scanf("%d ", &t);
