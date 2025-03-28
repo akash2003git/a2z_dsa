@@ -64,6 +64,17 @@ public:
   }
 };
 
+// 2
+// 5 3
+// 1 2 3 4 6
+// 2 3 5
+// 4 3
+// 1 2 3 3
+// 2 2 4
+
+// 1 2 3 4 5 6
+// 1 2 3 4
+
 int main() {
   int t;
   cin >> t; // Number of test cases
