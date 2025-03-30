@@ -36,9 +36,8 @@ public:
     //     int len = i - preSum[rem];
     //     maxLen = max(maxLen, len);
     //   }
-    //   if (preSum.find(sum) == preSum.end()) { // only map the sum if it is
-    //   NOT
-    //                                           // present in the map already
+    //   if (preSum.find(sum) == preSum.end()) {
+    //     // only map the sum if it is NOT present in the map already
     //     preSum[sum] = i;
     //   }
     // }
@@ -63,6 +62,24 @@ public:
     return maxLen;
   }
 };
+
+// 5
+// 5 5
+// 1 2 3 2 1
+// 6 10
+// 1 2 3 4 5 6
+// 5 2
+// 2 2 4 1 2
+// 7 3
+// 1 2 3 1 1 1 1
+// 4 2
+// 1 2 1 3
+//
+// 2
+// 4
+// 1
+// 3
+// 1
 
 int main() {
   int t;
