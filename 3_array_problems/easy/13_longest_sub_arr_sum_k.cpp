@@ -19,7 +19,7 @@ public:
     // }
     // return l;
 
-    // this solution is optimal for negative + positive
+    // This solution is optimal for negative + positive
     // int n = nums.size();
     // map<long long, int> preSum;
     // long long sum = 0;
@@ -30,14 +30,12 @@ public:
     //     maxLen = max(maxLen, i + 1);
     //   }
     //   int rem = sum - k;
-    //   if (preSum.find(rem) != preSum.end()) { // check if rem exists
-    //     // preSum.end() is a special iterator which indicated "not found"
-    //     // preSum.find() returns preSum.end() when an element is not found
+    //   if (preSum.find(rem) != preSum.end()) { // Check if rem exists
     //     int len = i - preSum[rem];
     //     maxLen = max(maxLen, len);
     //   }
     //   if (preSum.find(sum) == preSum.end()) {
-    //     // only map the sum if it is NOT present in the map already
+    //     // Only map the sum if it is NOT present in the map already
     //     preSum[sum] = i;
     //   }
     // }
