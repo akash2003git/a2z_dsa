@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <queue>
 
 using namespace std;
 
@@ -76,7 +75,7 @@ double minimiseMaxDistance(vector<int> &arr, int k) {
       high = mid;
     }
   }
-  return high; // or we can return low
+  return high;
 }
 
 int main() {
