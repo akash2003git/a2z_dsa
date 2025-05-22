@@ -17,9 +17,9 @@ public:
   void quickSort(vector<int> &arr, int low, int high) {
     // code here
     if (low < high) {
-      int pIndex = partition(arr, low, high);
-      quickSort(arr, low, pIndex - 1);
-      quickSort(arr, pIndex + 1, high);
+      int partitionIndex = partition(arr, low, high);
+      quickSort(arr, low, partitionIndex - 1);
+      quickSort(arr, partitionIndex + 1, high);
     }
   }
 
