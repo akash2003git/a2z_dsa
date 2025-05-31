@@ -58,6 +58,12 @@ public:
   }
 };
 
+// 1
+// 6
+// 2 0 2 1 1 0
+
+// 0 0 1 1 2 2
+
 int main() {
   // { Driver Code Starts
   int t;

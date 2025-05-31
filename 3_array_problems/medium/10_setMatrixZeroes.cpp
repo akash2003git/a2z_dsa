@@ -31,6 +31,7 @@ public:
     int m = matrix[0].size();
     int col0 = 1;
 
+    // marking rows and cols
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
         if (matrix[i][j] == 0) {
@@ -46,6 +47,8 @@ public:
       }
     }
 
+    // zeroing out the inner portion
+    // (porition excluding the row and col used for marking)
     for (int i = 1; i < n; i++) {
       for (int j = 1; j < m; j++) {
         if (matrix[i][j] != 0) {
@@ -57,12 +60,14 @@ public:
       }
     }
 
+    // zeroing out the marking row
     if (matrix[0][0] == 0) {
       for (int j = 1; j < m; j++) {
         matrix[0][j] = 0;
       }
     }
 
+    // zeroing out the marking col
     if (col0 == 0) {
       for (int i = 0; i < n; i++) {
         matrix[i][0] = 0;

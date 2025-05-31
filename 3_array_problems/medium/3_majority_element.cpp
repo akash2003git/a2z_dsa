@@ -7,32 +7,6 @@ class Solution {
 public:
   int majorityElement(vector<int> &nums) {
     // map<int, int> freq;
-    // int max_val = INT_MIN;
-    // int max_key = 0;
-    // for (int num : nums) {
-    //   freq[num]++;
-    // }
-    // for (auto it : freq) {
-    //   if (it.second > max_val) {
-    //     max_val = it.second;
-    //     max_key = it.first;
-    //   }
-    // }
-    // return max_key;
-
-    // map<int, int> freq;
-    // int max_val = INT_MIN;
-    // int max_key = 0;
-    // for (int num : nums) {
-    //   freq[num]++;
-    //   if (freq[num] > max_val) {
-    //     max_val = freq[num];
-    //     max_key = num;
-    //   }
-    // }
-    // return max_key;
-
-    // map<int, int> freq;
     // for (int num : nums) {
     //   freq[num]++;
     // }
@@ -65,6 +39,21 @@ public:
     return -1;
   }
 };
+
+// 3
+// 3
+// 3 2 3
+// 7
+// 2 2 1 1 1 2 2
+// 8
+// 1 2 2 1 1 2 1 2
+
+// 3
+// ~
+// 2
+// ~
+// -1
+// ~
 
 int main() {
   int t;
