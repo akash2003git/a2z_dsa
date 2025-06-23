@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Node Definition
 class Node {
 public:
   int data;
@@ -15,6 +16,7 @@ public:
   }
 };
 
+// Function to convert Array to LinkedList
 Node *arrToLL(vector<int> &arr) {
   Node *head = new Node(arr[0]);
   Node *mover = head;
@@ -26,6 +28,7 @@ Node *arrToLL(vector<int> &arr) {
   return head;
 }
 
+// Function for length of LinkedList
 int lengthOfLL(Node *head) {
   int cnt = 0;
   Node *temp = head;
@@ -36,6 +39,7 @@ int lengthOfLL(Node *head) {
   return cnt;
 }
 
+// Function to check if an element is present in a LinkedList
 int isPresent(Node *head, int val) {
   Node *temp = head;
   while (temp) {
