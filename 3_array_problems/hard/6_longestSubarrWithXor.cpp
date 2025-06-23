@@ -16,6 +16,7 @@ int countSubarraysWithGivenXor(vector<int> &arr, int k) {
   // }
   // return count;
 
+  // Imp: A^B = C ⟹ A^C = B
   int n = arr.size();
   int xR = 0;
   int cnt = 0;

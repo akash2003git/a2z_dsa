@@ -24,6 +24,7 @@ int solve(vector<int> &a) {
   for (int i = 0; i < n; i++) {
     sum += a[i];
     if (sum == 0) {
+      // we can also do mpp[0] = -1 before the loop instead of the if condtion
       maxLen = i + 1;
     } else {
       if (mpp.find(sum) != mpp.end()) {

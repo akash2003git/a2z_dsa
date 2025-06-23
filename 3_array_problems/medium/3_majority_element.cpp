@@ -18,7 +18,7 @@ public:
     // return -1;
 
     int count = 0;
-    int element;
+    int element = 0;
     for (int num : nums) {
       if (count == 0) {
         count = 1;
