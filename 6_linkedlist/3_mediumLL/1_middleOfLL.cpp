@@ -22,24 +22,45 @@ public:
     return len;
   }
 
+  // ListNode *middleNode(ListNode *head) {
+  //   if (head == nullptr)
+  //     return head;
+  //   int len = lengthLL(head);
+  //   if (len == 1)
+  //     return head;
+  //   int cnt = 0;
+  //   ListNode *temp = head;
+  //   while (temp != nullptr) {
+  //     cnt += 1;
+  //     if (cnt == len / 2) {
+  //       break;
+  //     }
+  //     temp = temp->next;
+  //   }
+  //   return temp->next;
+  // }
+
+  // Tortoise and Hare algorithm.
   ListNode *middleNode(ListNode *head) {
-    if (head == nullptr)
-      return head;
-    int len = lengthLL(head);
-    if (len == 1)
-      return head;
-    int cnt = 0;
-    ListNode *temp = head;
-    while (temp != nullptr) {
-      cnt += 1;
-      if (cnt == len / 2) {
-        break;
-      }
-      temp = temp->next;
+    ListNode *slow = head;
+    ListNode *fast = head;
+    while (fast != NULL && fast->next != NULL) {
+      // Move slow one step.
+      slow = slow->next;
+      // Move fast two steps.
+      fast = fast->next->next;
     }
-    return temp->next;
+    // Return the slow pointer, which is now at the middle node.
+    return slow;
   }
 };
+
+// 2
+// 1 2 3 4 5
+// 1 2 3 4 5 6
+
+// Middle of the list: 3 -> 4 -> 5
+// Middle of the list: 4 -> 5 -> 6
 
 // Helper function to create a linked list from a vector of integers
 ListNode *createLinkedList(const std::vector<int> &values) {
