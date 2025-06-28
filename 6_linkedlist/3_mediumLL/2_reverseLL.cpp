@@ -34,10 +34,16 @@ public:
   ListNode *reverseList(ListNode *head) {
     if (head == nullptr || head->next == nullptr)
       return head;
-    ListNode *back = head;
-    ListNode *temp = head->next;
-    ListNode *front = temp->next;
-    return head;
+    ListNode *temp = head;
+    ListNode *back = nullptr;
+    ListNode *front = nullptr;
+    while (temp != nullptr) {
+      front = temp->next;
+      temp->next = back;
+      back = temp;
+      temp = front;
+    }
+    return back;
   }
 };
 
