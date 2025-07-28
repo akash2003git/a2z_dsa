@@ -15,7 +15,8 @@ int main() {
   std::cout << "s2: \"" << s2 << "\"" << std::endl;
   std::cout << "s3: \"" << s3 << "\"" << std::endl;
   std::cout << "s4: \"" << s4 << "\"" << std::endl;
-  // std::cout << "s5: \"" << s5 << "\"" << std::cout << std::endl;
+  std::cout << "s5: \"" << s5 << "\"" << std::endl;
+  std::cout << std::endl;
 
   // 2. Concatenation
   std::string firstName = "John";

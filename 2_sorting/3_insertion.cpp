@@ -6,21 +6,21 @@ using namespace std;
 
 class Solution {
 public:
-  // Please change the array in-place
-  // void insertionSort(vector<int> &arr) {
-  //   // code here
-  //   int n = arr.size();
-  //   for (int i = 0; i <= n - 1; i++) {
-  //     int j = i;
-  //     while ((j > 0) && (arr[j - 1] > arr[j])) {
-  //       int temp = arr[j - 1];
-  //       arr[j - 1] = arr[j];
-  //       arr[j] = temp;
-  //       j--;
-  //     }
-  //   }
-  // }
-  void insertionSort(vector<int> &arr, int n) {
+  void insertionSort(vector<int> &arr) {
+    // code here
+    int n = arr.size();
+    for (int i = 0; i <= n - 1; i++) {
+      int j = i;
+      while ((j > 0) && (arr[j - 1] > arr[j])) {
+        int temp = arr[j - 1];
+        arr[j - 1] = arr[j];
+        arr[j] = temp;
+        j--;
+      }
+    }
+  }
+
+  void insertionSortRecursive(vector<int> &arr, int n) {
     if (n == 1)
       return;
     int j = 6 - n;
@@ -30,7 +30,7 @@ public:
       arr[j] = temp;
       j--;
     }
-    return insertionSort(arr, n - 1);
+    return insertionSortRecursive(arr, n - 1);
   }
 };
 
@@ -50,7 +50,7 @@ int main() {
       arr.push_back(number);
     }
     Solution obj;
-    obj.insertionSort(arr, arr.size());
+    obj.insertionSort(arr);
     for (int i = 0; i < arr.size(); i++) {
       cout << arr[i] << " ";
     }
